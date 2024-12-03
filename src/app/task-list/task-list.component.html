@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Task List</h2>
+    <button class="create-btn"  routerLink ="/task-create">Create New Task</button>
+<table id="myTable">
+    <tr class="header">
+      <th style="width:60%;">Task Name</th>
+      <th style="width:40%;">Description</th>
+      <th style="width:40%;">Status</th>
+      <th style="width:40%;">Action</th>
+    </tr>
+    <tr *ngFor="let row of data">
+      <td>{{row.name}}</td>
+      <td>{{row.description}}</td>
+      <td>{{row.status == 0?'Panding':'Complate'}}</td>
+      <td><a *ngIf="row.status == 0" [routerLink]="['/task-update', row._id]">Edit</a><br><a (click)="deleteTask(row._id)">Delete</a>
+        <br><a *ngIf="row.status == 0" (click)="complateTask(row)">Complate Task</a>
+      </td>
+    </tr>
+  </table>
+  </div>

@@ -1,0 +1,22 @@
+<form [formGroup]="userForm" (ngSubmit)="submit()">
+    <div class="container">
+      <h1>Register</h1>
+      <p>Please fill in this form to create an account.</p>
+      <hr>
+  
+      <label for="name"><b>Name <span class="err">*</span></b></label>
+      <input type="text" placeholder="Enter name" formControlName="name" id="name" required>
+      <span class="err" *ngIf="isSubmit && userForm.get('name')?.hasError('required')">Name is required!</span><br>
+      <label for="email"><b>Email <span class="err">*</span></b></label>
+      <input type="text" placeholder="Enter Email"id="email" formControlName="email" id="name" required>
+      <span class="err"  *ngIf="isSubmit && userForm.get('email')?.hasError('required')">Email is required!</span><br>
+      <label for="psw"><b>Password <span class="err">*</span></b></label>
+      <input type="password" placeholder="Enter Password" id="psw" formControlName="password" id="name" required>
+      <span  class="err"  *ngIf="isSubmit && userForm.get('password')?.hasError('required')">password is required!</span> <br>
+      <button type="submit" class="registerbtn">Register</button>
+    </div>
+  
+    <div class="container signin">
+      <p>Already have an account? <a routerLink ="login">Sign in</a>.</p>
+    </div>
+  </form>

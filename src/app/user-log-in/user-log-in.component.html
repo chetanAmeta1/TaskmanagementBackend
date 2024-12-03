@@ -1,0 +1,25 @@
+<div class="container">
+    <form [formGroup]="loginForm" (ngSubmit)="submit()">
+      <div class="row">
+        <h2 style="text-align:center">Login</h2>
+          
+  
+        <div class="col">
+          <div class="hide-md-lg">
+            <p>Or sign in manually:</p>
+          </div>
+  
+          <input type="text" formControlName="username" placeholder="Username"  required>
+          <span  class="err"  *ngIf="isSubmit && loginForm.get('username')?.hasError('required')">Username is required!</span> <br>
+          <input type="password"  formControlName="password"  placeholder="Password" required>
+          <span  class="err"  *ngIf="isSubmit && loginForm.get('password')?.hasError('required')">password is required!</span> <br>
+          <div class="">
+            <input class="submit-btn" type="submit" value="Login">
+            <a routerLink="/" class="btn">Sign up</a>
+          </div> 
+        </div>
+  
+      </div>
+    </form>
+  </div>
+  

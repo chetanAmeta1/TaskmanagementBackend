@@ -1,0 +1,44 @@
+#myTable {
+    border-collapse: collapse; /* Collapse borders */
+    width: 100%; /* Full-width */
+    border: 1px solid #ddd; /* Add a grey border */
+    font-size: 18px; /* Increase font-size */
+  }
+  .create-btn{
+    float: right;
+    background: skyblue;
+    border: none;
+    margin: 1%;
+    padding: 9px;
+    border-radius: 6px;
+  }
+  .container {
+    padding: 16px;
+    width: 60%;
+    margin-left: 20%;
+  }
+  #myTable th, #myTable td {
+    text-align: left; /* Left-align text */
+    padding: 12px; /* Add padding */
+  }
+  
+  #myTable tr {
+    /* Add a bottom border to all table rows */
+    border-bottom: 1px solid #ddd;
+  }
+  
+  #myTable tr.header, #myTable tr:hover {
+    /* Add a grey background color to the table header and on hover */
+    background-color: #f1f1f1;
+  }
+  a {
+    color: blue; /* Text color */
+    text-decoration: none; /* Remove underline */
+    font-size: 16px; /* Font size */
+    cursor: pointer; /* Change mouse icon to pointer */
+  }
+  
+  a:hover {
+    color: darkblue; /* Change color on hover */
+    text-decoration: underline; /* Add underline on hover */
+  }

@@ -1,0 +1,16 @@
+<form  [formGroup]="taskForm" (ngSubmit)="submit()">
+    <div class="container">
+      <h1>Create task</h1>
+      <hr>
+  
+      <label><b>Task Name  <span class="err">*</span></b></label>
+      <input type="text" placeholder="Enter Task Name" formControlName="name"  required>
+      <span class="err" *ngIf="isSubmit && taskForm.get('name')?.hasError('required')">Name is required!</span><br>
+      <label for="psw"><b>Description  <span class="err">*</span></b></label>
+      <textarea required formControlName="description" ></textarea> 
+      <span class="err" *ngIf="isSubmit && taskForm.get('description')?.hasError('required')">Description is required!</span><br>
+      <hr>
+
+      <button type="submit" class="registerbtn">Submit</button>
+    </div> 
+  </form>
