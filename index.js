@@ -16,7 +16,7 @@ dbConnect();
 
 // Routes
 app.use('/api/auth', authRoutes);
-app.use('/api/users',verifyToken);
+app.use('/api/users', userRoutes);
 app.use('/api/tasks',verifyToken, taskRoutes);
 
 // Start the server
